@@ -60,11 +60,22 @@ function App() {
       <h1>Expense Tracker</h1>
 
       <div>
-        <input
-          placeholder="Title"
+        <select
           value={title}
           onChange={(e) => setTitle(e.target.value)}
-        />
+        >
+          <option value="">Select Category</option>
+          <option value="Groceries">Groceries</option>
+          <option value="Rent">Rent</option>
+          <option value="Power">Power</option>
+          <option value="Internet">Internet</option>
+          <option value="Phone">Phone</option>
+          <option value="Car Bills">Car</option>
+          <option value="Transport">Transport</option>
+          <option value="Insurance">Insurance</option>
+          <option value="Subscriptions">Subscriptions</option>
+          <option value="Other">Other</option>
+        </select>
 
         <input
           placeholder="Amount"
