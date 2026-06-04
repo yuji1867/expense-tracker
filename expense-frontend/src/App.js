@@ -1,3 +1,4 @@
+import "./App.css";
 import { useEffect, useState } from "react";
 
 function App() {
@@ -102,19 +103,23 @@ function App() {
 
       <h3>Expenses</h3>
 
-      <ul>
-        {expenses.map((e) => (
-          <li key={e.id}>
-            {e.title} — ${e.amount} paid by {e.paid_by} on {e.date}
-            <button
-              onClick={() => deleteExpense(e.id)}
-              style={{ marginLeft: "10px" }}
-            >
-              Delete
-            </button>
-          </li>
+      <div className="expense-header">
+        <div>Title</div>
+        <div>Amount</div>
+        <div>Date</div>
+        <div>Paid by</div>
+      </div>
+
+      <div className="expense-list">
+        {expenses.map((expense) => (
+          <div className="expense-row" key={expense.id}>
+            <div>{expense.title}</div>
+            <div>${expense.amount}</div>
+            <div>{expense.date}</div>
+            <div>{expense.paid_by}</div>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 }
