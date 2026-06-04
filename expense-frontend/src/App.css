@@ -45,7 +45,7 @@
 
 .expense-row {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr 1fr auto;
   padding: 10px;
   border-radius: 8px;
   background: #f5f5f5;
@@ -54,7 +54,7 @@
 
 .expense-header {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr 1fr auto;
   font-weight: bold;
   padding: 10px;
 }

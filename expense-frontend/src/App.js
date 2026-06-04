@@ -108,6 +108,7 @@ function App() {
         <div>Amount</div>
         <div>Date</div>
         <div>Paid by</div>
+        <div>Actions</div>
       </div>
 
       <div className="expense-list">
@@ -117,6 +118,9 @@ function App() {
             <div>${expense.amount}</div>
             <div>{expense.date}</div>
             <div>{expense.paid_by}</div>
+            <button onClick={() => deleteExpense(expense.id)}>
+              Delete
+            </button>
           </div>
         ))}
       </div>
